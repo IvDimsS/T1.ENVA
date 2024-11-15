@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" thread-count="1" verbose="1">
+    <parameter name="platform" value="android"/>
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.EventTabTest"/>
+<!--            <class name="tests.TestTwo"/>-->
+        </classes>
+    </test>
+</suite>

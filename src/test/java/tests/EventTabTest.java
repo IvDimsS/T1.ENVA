@@ -5,11 +5,10 @@ import org.testng.annotations.Test;
 import screens.EventTabPage;
 
 
-public class TestTwo extends EventTabPage {
+public class EventTabTest extends EventTabPage {
 
     @Test(groups = "smoke")
-    public void passcode3() {
-//        setPin();
-
+    public void eventTabList() {
+        eventTabClick();
     }
 }
