@@ -6,6 +6,7 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -25,7 +26,7 @@ public abstract class BaseObject {
     public void setUp(String platform) throws MalformedURLException {
         DriverProvider driverProvider = new DriverProvider();
         driver = driverProvider.getDriver(platform);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 30);
         installPin();
     }
 
@@ -50,6 +51,12 @@ public abstract class BaseObject {
         isClickable(locator);
         driver.findElement(By.xpath(locator)).sendKeys();
     }
+
+    public void textAssert(String expected, String actual) {
+//        driver.findElement(By.xpath(expected)).getText();
+        Assert.assertEquals(expected, actual, "Text not found");
+    }
+
 
     private void installPin(){
         clickKey(num5);

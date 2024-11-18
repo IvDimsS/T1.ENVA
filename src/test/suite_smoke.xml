@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.EventTabTest"/>
+            <class name="tests.EventTest"/>
 <!--            <class name="tests.TestTwo"/>-->
         </classes>
     </test>

@@ -2,10 +2,10 @@ package tests;
 
 
 import org.testng.annotations.Test;
-import screens.EventTabPage;
+import screens.EventPage;
 
 
-public class TestTwo extends EventTabPage {
+public class TestTwo extends EventPage {
 
     @Test(groups = "smoke")
     public void passcode3() {
