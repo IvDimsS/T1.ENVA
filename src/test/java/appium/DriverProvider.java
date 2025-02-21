@@ -2,6 +2,7 @@ package appium;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -28,6 +29,18 @@ public class DriverProvider {
                     driver = new AppiumDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), set);
                 }
                 break;
+                case "ios": {
+                    set.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+//                    set.setCapability("appium:appPackage", "enva.t1.mobile");
+                    set.setCapability(MobileCapabilityType.APP, "/Users/dmitry/Library/Developer/Xcode/DerivedData/ENVA-clvrayqluasexpbefnluuvnacqdf/Build/Products/Debug-iphonesimulator/ENVA.app");
+                    set.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 16 Pro");
+                    set.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+                    set.setCapability(MobileCapabilityType.PLATFORM_VERSION, "18.2");
+                    set.setCapability("udid", "A706202B-79C5-4602-97DE-C55A0F9E801B");
+                    set.setCapability("appium:noReset", "true");
+                    driver = new AppiumDriver<>(new URL("http://127.0.0.1:8100/wd/hub"), set);
+                }
+                break;
                 case "android": {
                     set.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
                     set.setCapability("platformVersion", "11.0");
@@ -37,7 +50,22 @@ public class DriverProvider {
                     set.setCapability("appActivity", "enva.t1.mobile.MainActivity");
                     set.setCapability("noReset", true);
                     set.setCapability("autoGrantPermissions", true);
-                    driver = new AppiumDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), set);
+                    driver = new AppiumDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), set);
+                }
+                break;
+                case "ios2": {
+//                    set.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+                    set.setCapability("platformName", "iOS");
+                    set.setCapability("platformVersion", "18.2");
+//                    set.setCapability("automationName", "XCUITest");
+                    set.setCapability("deviceName", "iPhone 16");
+                    set.setCapability("udid", "F4B8DB3E-38CD-441A-92A0-C2651675B535");
+                    set.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+                    set.setCapability("bundleId", "enva.t1.mobile");
+//                    set.setCapability("appActivity", "enva.t1.mobile.MainActivity");
+                    set.setCapability(MobileCapabilityType.APP, "/Users/dmitry/Library/Developer/Xcode/DerivedData/ENVA-clvrayqluasexpbefnluuvnacqdf/Build/Products/Debug-iphonesimulator/ENVA.app");
+                    set.setCapability("noReset", true);
+                    driver = new AppiumDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), set);
                 }
                 break;
                 default: { throw new IllegalArgumentException("Unsupported platform: " + platform); }

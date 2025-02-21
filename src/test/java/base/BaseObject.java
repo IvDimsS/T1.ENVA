@@ -37,7 +37,7 @@ public abstract class BaseObject {
         }
     }
 
-    private void isClickable(String locator) {
+    public void isClickable(String locator) {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
 
     }
@@ -47,16 +47,15 @@ public abstract class BaseObject {
         driver.findElement(By.xpath(locator)).click();
     }
 
-    public void sendKey(String locator) {
+    public void sendKey(String locator, String text) {
         isClickable(locator);
-        driver.findElement(By.xpath(locator)).sendKeys();
+        driver.findElement(By.xpath(locator)).sendKeys(text);
     }
 
     public void textAssert(String expected, String actual) {
 //        driver.findElement(By.xpath(expected)).getText();
         Assert.assertEquals(expected, actual, "Text not found");
     }
-
 
     private void installPin(){
         clickKey(num5);
