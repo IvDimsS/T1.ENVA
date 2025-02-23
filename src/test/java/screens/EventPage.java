@@ -14,7 +14,7 @@ public class EventPage extends BaseObject {
     String eventWidget = "";
     String eventWidgetCart = "";
     String eventCalendarButton = "";
-    String eventNotificationButton = "";
+    String eventNotificationButton = "mm";
     String eventConnectButton = "jhkjhk";
     String text;
 
