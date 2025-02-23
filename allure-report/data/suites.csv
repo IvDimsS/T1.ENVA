@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri Feb 21 04:42:59 MSK 2025","Fri Feb 21 04:42:59 MSK 2025","1","Test Suite","Smoke Tests","tests.ProfileTest","tests.ProfileTest","setUp","setUp",""
+"passed","Fri Feb 21 04:47:56 MSK 2025","Fri Feb 21 04:48:03 MSK 2025","6762","Test Suite","Smoke Tests","tests.ProfileTest","tests.ProfileTest","testChangePhoto","testChangePhoto",""
