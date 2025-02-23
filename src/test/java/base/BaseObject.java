@@ -53,7 +53,6 @@ public abstract class BaseObject {
     }
 
     public void textAssert(String expected, String actual) {
-//        driver.findElement(By.xpath(expected)).getText();
         Assert.assertEquals(expected, actual, "Text not found");
     }
 
