@@ -1,0 +1,1 @@
+[{"uid":"c6042b3277b3e159","name":"testChangePhoto","time":{"start":1740102476987,"stop":1740102483749,"duration":6762},"status":"passed","severity":"normal"},{"uid":"107c966a1e1ca656","name":"setUp","time":{"start":1740102179299,"stop":1740102179300,"duration":1},"status":"broken","severity":"normal"}]

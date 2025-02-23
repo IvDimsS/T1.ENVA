@@ -14,8 +14,8 @@ public class EventPage extends BaseObject {
     String eventWidget = "";
     String eventWidgetCart = "";
     String eventCalendarButton = "";
-    String eventNotificationButton = "";
-    String eventConnectButton = "";
+    String eventNotificationButton = "mm";
+    String eventConnectButton = "jhkjhk";
     String text;
 
     @Step("Открытие Событий на экране Сервисов")
