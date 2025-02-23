@@ -2,11 +2,9 @@ package screens;
 
 
 import base.BaseObject;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
 
 
 public class EventPage extends BaseObject {

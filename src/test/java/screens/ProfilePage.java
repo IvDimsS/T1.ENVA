@@ -3,7 +3,6 @@ package screens;
 import base.BaseObject;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 public class ProfilePage extends BaseObject {
     //Android locators and tests
