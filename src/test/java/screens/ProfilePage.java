@@ -20,28 +20,28 @@ public class ProfilePage extends BaseObject {
 
     @Step("Нажать кнопку Профиль на таббаре")
     public void profileTabClick() {
-        clickKey(profileTab);
+        click(profileTab);
     }
 
     @Step("Нажать аватар")
     public void photoButtonClick() {
-        clickKey(photoButton);
+        click(photoButton);
     }
 
     @Step("Нажать кнопку Изменить фото")
     public void changePhotoButtonClick() {
-        clickKey(changePhotoButton);
+        click(changePhotoButton);
     }
 
     @Step("Нажать на картинку в галерее")
     public void pictureClick() {
-        clickKey(picture);
+        click(picture);
         isClickable(photoButton);
     }
 
     @Step("Нажать на таб Руководитель")
     public void supervisor() {
-        clickKey(supervisorTab);
+        click(supervisorTab);
         text = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.TextView")).getText();
         String actualText = "Контакты";
         textAssert(text,actualText);
@@ -49,7 +49,7 @@ public class ProfilePage extends BaseObject {
 
     @Step("Нажать на департамент пользователя")
     public void userDepartmentClick() {
-        clickKey(userDepartment);
+        click(userDepartment);
         text = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.TextView")).getText();
         String actualText = "Контакты";
         textAssert(text,actualText);
@@ -57,7 +57,7 @@ public class ProfilePage extends BaseObject {
 
     @Step("Нажать на таб HR BP")
     public void userHRBPClick() {
-        clickKey(userHRBP);
+        click(userHRBP);
         text = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.TextView")).getText();
         String actualText = "Контакты";
         textAssert(text,actualText);
@@ -65,12 +65,12 @@ public class ProfilePage extends BaseObject {
 
     @Step("Нажать на кнопку дополнительных функций")
     public void bshButtonsClick () {
-        clickKey(bshButton);
+        click(bshButton);
     }
 
     @Step("Нажать кнопку О приложении")
     public void aboutAppClick () {
-        clickKey(aboutAppButton);
+        click(aboutAppButton);
         text = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.TextView[1]")).getText();
         String actualText = "О приложении";
         textAssert(text,actualText);

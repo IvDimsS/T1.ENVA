@@ -13,6 +13,6 @@ public class ContactsPage extends BaseObject {
 
 
     public void asd() {
-        clickKey(servicesTab);
+        click(servicesTab);
     }
 }

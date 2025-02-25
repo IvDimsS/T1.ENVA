@@ -20,34 +20,34 @@ public class EventPage extends BaseObject {
 
     @Step("Открытие Событий на экране Сервисов")
     public void eventTabClick(){
-        clickKey(servicesTab);
-        clickKey(eventServicesTab);
+        click(servicesTab);
+        click(eventServicesTab);
     }
 
     @Step("Тап на виджет Событий")
     public void eventWidgetClick() {
         Allure.step("Клик на " + eventWidget);
-        clickKey(eventWidget);
+        click(eventWidget);
     }
 
     @Step("Карточку виджета Событий")
     public void eventWidgetCartClick() {
-        clickKey(eventWidgetCart);
+        click(eventWidgetCart);
     }
 
     @Step("Кнопка календаря")
     public void eventCalendarClick () {
-        clickKey(eventCalendarButton);
+        click(eventCalendarButton);
     }
 
     @Step("Кнопка напоминания")
     public void eventNotificationButtonClick () {
-        clickKey(eventNotificationButton);
+        click(eventNotificationButton);
     }
 
     @Step("Кнопка Присоединиться")
     public void eventConnectButtonClick() {
-        clickKey(eventConnectButton);
+        click(eventConnectButton);
     }
 
     @Step("Ожидаемый результат")

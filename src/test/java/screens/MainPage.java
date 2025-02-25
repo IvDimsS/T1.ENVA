@@ -14,21 +14,21 @@ public class MainPage extends BaseObject {
 
     @Step("Нажать на виджет Мои задачи")
     public void widgetInboxClick() {
-        clickKey(widgetInbox);
+        click(widgetInbox);
     }
 
     @Step("Нажать кнопку Поиск на таббаре")
     public void searchFieldClick() {
-        clickKey(searchField);
+        click(searchField);
     }
 
     @Step("Ввести в после текст")
     public void setTest () {
-        sendKey(searchField, findTest);
+        send(searchField, findTest);
     }
 
     public void employCartClick() {
-        clickKey(employCart);
+        click(employCart);
         try {
             Thread.sleep(5000); // 5 секунд
         } catch (InterruptedException e) {
